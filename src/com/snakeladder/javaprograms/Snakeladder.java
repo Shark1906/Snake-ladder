@@ -9,11 +9,15 @@ public class Snakeladder {
 		// TODO Auto-generated method stub
 		
 		int position = 0;
+		
+		
+		while(position < 100) {
 		int die_roll = (int)Math.floor ((Math.random() * 10 % 6) + 1);
 		int option = (int)Math.floor (Math.random() * 10 % 3);
-		
 		switch (option) {
+		
 		case SNAKE:
+			if(position > 0)
 			position -= die_roll;
 			break;
 			
@@ -24,7 +28,8 @@ public class Snakeladder {
 		default:
 			break;
 		}
-		
+		}
+		System.out.println(position);
 	}
 
 }
