@@ -6,8 +6,8 @@ public class Snakeladder {
 		// TODO Auto-generated method stub
 		
 		int position = 0;
-		System.out.println("Position : " + position);
-
+		int die_roll = (int)Math.floor ((Math.random() * 10 % 6) + 1);
+		System.out.println(die_roll);
 	}
 
 }
