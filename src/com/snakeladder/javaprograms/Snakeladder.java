@@ -6,10 +6,8 @@ public class Snakeladder {
 	public static final int LADDER = 2;
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
+
 		int position = 0;
-		
 		
 		while(position < 100) {
 		int die_roll = (int)Math.floor ((Math.random() * 10 % 6) + 1);
@@ -17,8 +15,11 @@ public class Snakeladder {
 		switch (option) {
 		
 		case SNAKE:
-			if(position > 0)
+			
 			position -= die_roll;
+			if(position < 0) {
+				position = 0;
+			}
 			break;
 			
 		case LADDER:
