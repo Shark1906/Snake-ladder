@@ -24,13 +24,18 @@ public class Snakeladder {
 			
 		case LADDER:
 			position += die_roll;
+			if(position > 100) {
+				position -= die_roll;
+			}
 			break;
 
 		default:
 			break;
 		}
 		}
-		System.out.println(position);
+		
+		if(position == 100)
+		System.out.println("Winner winner chicken dinner");
 	}
 
 }
